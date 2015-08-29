@@ -90,6 +90,6 @@ public class BuscaInterpolada {
 
     @Override
     public String toString() {
-        return "BuscaBinariaVetor{" + vet + '}';
+        return "BuscaInterpoladaVetor{" + vet + '}';
     }
 }
