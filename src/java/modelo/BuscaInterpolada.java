@@ -51,22 +51,27 @@ public class BuscaInterpolada {
         int ini = 0;
         int fim = tamanho - 1;
         boolean flag = false;
+        int percentualPosicao=0;
 
-        if (chave >=  Math.abs(vet[0]) && chave <=  Math.abs(vet[vet.length - 1])) { // senao tiver este if já elvis valores negativos e maiores que o array
+        if (chave >= Math.abs(vet[0]) && chave <= Math.abs(vet[vet.length - 1])) { // senao tiver este if já elvis valores negativos e maiores que o array
 
-            int percentualPosicao = ini + (fim - ini) * ((chave - Math.abs(vet[ini])) / (Math.abs(vet[fim]) - Math.abs(vet[ini])));
+            if (Math.abs(vet[fim]) - Math.abs(vet[ini]) != 0) {
+                percentualPosicao = ini + (fim - ini) * ((chave - Math.abs(vet[ini])) / (Math.abs(vet[fim]) - Math.abs(vet[ini])));
+            }
 
-            while (!flag && ini < fim &&  Math.abs(vet[percentualPosicao]) != chave) {
+            while (!flag && ini < fim && Math.abs(vet[percentualPosicao]) != chave) {
 
-                if (chave <  Math.abs(vet[percentualPosicao])) {
+                if (chave < Math.abs(vet[percentualPosicao])) {
                     fim = percentualPosicao - 1;
                 } else {
                     if (chave > Math.abs(vet[percentualPosicao])) {
                         ini = percentualPosicao + 1;
                     }
                 }
-                if (chave >=  Math.abs(vet[0]) && chave <=  Math.abs(vet[vet.length - 1])) {
-                    percentualPosicao = ini + (fim - ini) * ((chave - Math.abs(vet[ini])) / (Math.abs(vet[fim]) - Math.abs(vet[ini])));
+                if (chave >= Math.abs(vet[0]) && chave <= Math.abs(vet[vet.length - 1])) {
+                    if (Math.abs(vet[fim]) - Math.abs(vet[ini]) != 0) {
+                        percentualPosicao = ini + (fim - ini) * ((chave - Math.abs(vet[ini])) / (Math.abs(vet[fim]) - Math.abs(vet[ini])));
+                    }
                 } else {
                     flag = true;
                 }
