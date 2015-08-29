@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/08/2015, 19:00:16
+    Author     : gurip_000
+*/
+
+
+.formularios{
+
+    background-color:#bbb;
+    margin:15px;
+    padding:15px;
+    color:#000;
+    font-weight:bold;
+    font-size:18px;
+    border-radius:10px;
+}
+
+.header_especiais{
+    
+    margin:25px;
+}
+
+#valor1_vazio , #valor2_vazio,#valor3_vazio,#valor4_vazio,#valor5_vazio,#valor6_vazio,#valor7_vazio{
+
+    color:red;
+    
+}
